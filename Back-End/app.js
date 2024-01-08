@@ -11,11 +11,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use(cors({
-  origin: 'http://localhost:4000',
-  credentials: true,
-  optionsSuccessStatus: 200
-}));
+app.use(cors());
 
 
 app.use("/user", userRouter);
